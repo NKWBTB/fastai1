@@ -216,7 +216,7 @@ class PixelShuffle_ICNR(Module):
 
     def forward(self,x):
         x = self.shuf(self.relu(self.conv(x)))
-        return self.blur(self.pad(x)) if self.do_blur else x
+        return x
 
 class FlattenedLoss():
     "Same as `func`, but flattens input and target."
